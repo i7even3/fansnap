@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fansnap API</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f7f7f7;
+    }
+    h1 { color: #333; }
+    p { margin-bottom: 1rem; }
+    code {
+      background: #eee;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    ul { margin-left: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Fansnap API</h1>
+    <p>Welcome to the Fansnap prototype server.  This server exposes a JSON API for user authentication, profiles, posts, subscriptions, store items, messaging, tipping, referrals and admin functions.  It does not include a fully built front‑end UI.</p>
+    <p>You can use a REST client such as <a href="https://www.postman.com/">Postman</a> or <code>curl</code> to interact with the API.</p>
+    <h2>Example Endpoints</h2>
+    <ul>
+      <li><code>POST /api/register</code> – Register a new user</li>
+      <li><code>POST /api/login</code> – Log in</li>
+      <li><code>GET /api/profile</code> – View your profile</li>
+      <li><code>POST /api/posts</code> – Create a post (creator only)</li>
+      <li><code>GET /api/posts/&lt;creator&gt;</code> – View a creator's posts</li>
+      <li><code>POST /api/subscribe/&lt;creator&gt;</code> – Subscribe to a creator</li>
+      <li><code>POST /api/store/&lt;creator&gt;</code> – Add an item to the store (creator only)</li>
+      <li><code>POST /api/order/&lt;itemId&gt;</code> – Place an order</li>
+      <li><code>POST /api/message/send</code> – Send a direct message</li>
+      <li><code>POST /api/tip/&lt;creator&gt;</code> – Send a tip</li>
+    </ul>
+    <p>For a complete list of endpoints, view the <code>server.js</code> file in this project.</p>
+    <p>This is an early prototype.  In a production deployment, you would build a front‑end application (e.g. React, Next.js) to consume these endpoints.</p>
+  </div>
+</body>
+</html>
